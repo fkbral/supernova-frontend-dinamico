@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundamentos HTML</title>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- <style>
+    nav {
+      color: #fff;
+      background-color: steelblue;
+      padding: 15px;
+    }
+  </style> -->
+</head>
+<body>
+  <!-- <label>
+  Nome de usuário
+  <input placeholder="ex: fulano467" type="text">
+</label> -->
+  <header>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Cadastro</h1>
+
+    <form>
+      <div>
+        <div>
+          <label for="username-input">Nome de usuário</label>
+          <input
+            required
+            name="username"
+            id="username-input"
+            placeholder="ex: fulano467"
+            type="text"
+          />
+        </div>
+
+        <label for="">Senha</label>
+        <input
+          name="password"
+          placeholder="minha senha secreta"
+          type="password"
+        />
+      </div>
+
+      <label for="observation-input">Observações</label>
+      <textarea id="observation-input" cols="30" rows="10"></textarea>
+      <br />
+
+      <fieldset>
+        <legend>Dados extras</legend>
+
+        <input id="newsletter-input" type="checkbox" />
+        <label for="newsletter-input">Me inscreva na newsletter</label>
+
+        <p>Qual o melhor dia para participar das aulas?</p>
+        <input
+          id="classes-day-input-monday"
+          type="radio"
+          value="monday"
+          name="classes-day-input"
+        />
+        <label for="classes-day-input-monday">Segunda-feira</label>
+
+        <input
+          id="classes-day-input-wednesday"
+          type="radio"
+          value="wednesday"
+          name="classes-day-input"
+        />
+        <label for="classes-day-input-wednesday">Quarta-feira</label>
+
+        <input
+          id="classes-day-input-friday"
+          type="radio"
+          value="friday"
+          name="classes-day-input"
+        />
+        <label for="classes-day-input-friday">Sexta-feira</label>
+      </fieldset>
+
+      <button type="reset">Limpar formulário</button>
+      <button type="submit">Completar cadastro</button>
+    </form>
+  </main>
+</body>
+</html>

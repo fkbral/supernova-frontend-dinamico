@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --default-padding: 1.5rem ;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+}
+
+nav.main-menu {
+  color: #fff;
+  background-color: steelblue;
+  padding: var(--default-padding);
+}
+nav.main-menu > ul {
+  list-style: none;
+}
+nav.main-menu > ul > li {
+  display: inline-block;
+}
+nav.main-menu > ul > li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+nav.main-menu > ul > li + li {
+  margin-left: var(--default-padding);
+}
+
+main {
+  padding: var(--default-padding);
+}
