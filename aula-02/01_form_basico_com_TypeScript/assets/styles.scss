@@ -10,6 +10,25 @@
   --primary-color: steelblue;
 }
 
+.input-highlight {
+  background-color: #f00f00;
+  color: '#333';
+  border: 4px solid gold;
+}
+
+a {
+  font-weight: 300;
+}
+
+// .main-menu {
+[data-navigation=main-menu] {
+  .active-link {
+    font-weight: 700;
+    // text-decoration: underline;
+  }
+}
+
+
 body {
   font-size: 1.8rem;
   font-family: 'Roboto', sans-serif;
