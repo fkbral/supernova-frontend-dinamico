@@ -16,6 +16,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
         <li><a href="login.html">Login</a></li>
+        <li><a href="pagamento.html">Pagamento</a></li>
       </ul>
     </nav>
   </header>
@@ -23,7 +24,7 @@
   <main>
     <h1>Cadastro</h1>
 
-    <form>
+    <form id="register-user-form">
       <div>
         <div>
           <label for="username-input">Nome de usuário</label>
@@ -80,20 +81,14 @@
         <label for="classes-day-input-friday">Sexta-feira</label>
       </fieldset>
 
-      <div id="payment-options">
-        <button data-transaction="credit">Pagar no Crédito</button>
-        <button data-transaction="debit">Pagar no Débito</button>
-        <button data-transaction="pix">Pagar no Pix</button>
-      </div>
-
-      <button data-movement="up" type="button">↑</button>
-      <button data-movement="left" type="button">←</button>
-      <button data-movement="right" type="button">→</button>
-      <button data-movement="down" type="button">↓</button>
-
       <button type="reset">Limpar formulário</button>
       <button type="submit">Completar cadastro</button>
     </form>
+
+    <section>
+      <h2>Usuários Cadastrados</h2>
+      <ul data-user-list></ul>
+    </section>
   </main>
 </body>
 </html>

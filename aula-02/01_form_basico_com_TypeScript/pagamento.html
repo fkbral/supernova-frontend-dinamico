@@ -7,6 +7,7 @@
   <title>Fundamentos HTML</title>
   <link rel="stylesheet" href="assets/styles.css">
   <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="/src/cadastro.ts"></script>
 </head>
 <body>
   <header>
@@ -19,9 +20,25 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <h1>Login</h1>
+    <h1>Pagamento</h1>
+
+    <form>
+      <div id="payment-options">
+        <button data-transaction="credit">Pagar no Crédito</button>
+        <button data-transaction="debit">Pagar no Débito</button>
+        <button data-transaction="pix">Pagar no Pix</button>
+      </div>
+
+      <button data-movement="up" type="button">↑</button>
+      <button data-movement="left" type="button">←</button>
+      <button data-movement="right" type="button">→</button>
+      <button data-movement="down" type="button">↓</button>
+
+      <button type="reset">Limpar formulário</button>
+      <button type="submit">Completar cadastro</button>
+    </form>
   </main>
 </body>
 </html>
