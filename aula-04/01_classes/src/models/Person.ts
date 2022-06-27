@@ -20,7 +20,7 @@ class Person implements PersonContract {
 
   // constructor(name: string, age: number, email: string) {
   constructor(data: CreatePersonDTO) {
-    const { name, age, email} = data
+    const { name, age, email } = data
     
     this.name = name
     this.age = age
