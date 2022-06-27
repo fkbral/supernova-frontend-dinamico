@@ -1,20 +1,32 @@
+import { v4 as uuid } from 'uuid'
+
 interface AnimalContract {
+  id: string
+  fullname: string
   name: string
   populationInMilions: number
+  createdAt: Date
+  updatedAt: Date
 }
 
 interface CreateAnimalDTO {
-  name: string
+  fullname: string
   populationInMilions: number
 }
 
-class Animal implements AnimalContract{
+class Animal implements AnimalContract {
+  public id: string
   public name: string
   public populationInMilions: number
+  public createdAt: Date
+  public updatedAt: Date
 
   constructor({name, populationInMilions}: CreateAnimalDTO) {
+    this.id = uuid()
     this.name = name
     this.populationInMilions = populationInMilions
+    this.createdAt = new Date()
+    this.updatedAt = new Date()
   }
 
   eat() {
@@ -116,6 +128,7 @@ console.log(duck.fly())
 console.log(duck.walk())
 console.log(duck.swim())
 console.log(duck.eat())
+console.log(penguin)
 console.log(penguin.eat())
 console.log(penguin.walk())
 console.log(penguin.swim())
