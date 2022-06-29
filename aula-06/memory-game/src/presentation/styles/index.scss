@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color: #333;
+}
+
+body {
+  color: #fff;
+  background-color: var(--bg-color);
+  font-size: 1.6rem;
+}
+
+.memory-game-board {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.memory-game-card {
+  flex: 30%;
+
+  button {
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem 1.8rem;
+    font-size: 2.4rem;
+  }
+
+  p {
+    opacity: 1;
+    transition: 1000ms ease-in-out;
+  }
+
+  &[data-hidden] p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+}

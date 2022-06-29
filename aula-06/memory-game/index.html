@@ -5,9 +5,27 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+
+    <link rel="stylesheet" href="src/presentation/styles/index.css">
   </head>
+
   <body>
-    <div id="app"></div>
+    <template id="memory-game-board-template">
+      <section class="memory-game-board">
+        <h1>Memory Game Player <span data-player-number>número</span></h1>
+        <ul></ul>
+      </section>
+    </template>
+
+    <template id="memory-game-card-template">
+      <li class="memory-game-card">
+        <button><p>clique em mim</p></button>
+      </li>
+    </template>
+
+    <div data-memory-game-board="player1"></div>
+    <div data-memory-game-board="player2"></div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
