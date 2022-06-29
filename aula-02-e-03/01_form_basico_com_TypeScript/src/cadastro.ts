@@ -78,7 +78,9 @@ signUpForm.onsubmit = (event: SubmitEvent) => {
   event.preventDefault()
 
   const usernameInput = document.querySelector<HTMLInputElement>('#username-input')!
-  // const username = event?.target!.querySelector('#username-input').value
+  const target = event.target as HTMLFormElement
+  // const username = (target.querySelector('#username-input') as HTMLInputElement).value
+  // const username = target.querySelector<HTMLInputElement>('#username-input')!.value
 
   // const usernameChosenDayInput = document.querySelector<HTMLInputElement>('[name="classes-day-input]')
   const usernameSubscribedToNewsletterInput = document.querySelector<HTMLInputElement>('#newsletter-input')!

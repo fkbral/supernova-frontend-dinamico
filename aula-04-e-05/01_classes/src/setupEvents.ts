@@ -4,7 +4,9 @@
 // buttons.forEach(button => button.onclick = () => {})
 
 document.addEventListener('click', (event: Event) => {
-  if(event.target.dataset.cell) {
+  const target = event.target as HTMLButtonElement
+
+  if(target.dataset.cell) {
     console.log('ok')
   }
 })
