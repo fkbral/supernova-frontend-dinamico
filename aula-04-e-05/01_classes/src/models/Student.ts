@@ -18,7 +18,7 @@ class Student extends Person {
     
     console.log(this.teste)
     this.globalAverage = globalAverage
-    this.#attendance = attendance
+    this.attendance = attendance
   }
 
   get attendance() {
