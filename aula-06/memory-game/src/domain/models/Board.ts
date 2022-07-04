@@ -60,6 +60,24 @@ export class Board implements BoardContract {
     
     Array.from({length: this.boardSize}).forEach((_, index) => {
       let randomFruitIndex = Math.round(Math.random() * this.chosenTypes.length - 1)
+      let fruitAmountArray: number[] = []
+
+      // while(fruitCardAmount[this.chosenTypes[randomFruitIndex]] >= this.cardMatchAmount) {
+      //   randomFruitIndex = Math.round(Math.random() * this.chosenTypes.length - 1)
+      // }
+
+      // for (const fruitAmount in fruitCardAmount) {
+      //   console.log(fruitAmount)
+      //   fruitAmountArray.push(fruitCardAmount[fruitAmount])
+      // }
+
+      // const allFruitsTaken = fruitAmountArray.every(
+      //   fruitAmount => fruitAmount >= this.cardMatchAmount
+      // )
+
+      // if(allFruitsTaken) {
+      //   return
+      // }
 
       if(fruitCardAmount[this.chosenTypes[randomFruitIndex]] >= this.cardMatchAmount) {
         return

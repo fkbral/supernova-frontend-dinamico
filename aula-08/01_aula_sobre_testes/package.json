@@ -1,0 +1,27 @@
+{
+  "name": "01_aula_sobre_testes",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --passWithNoTests --watchAll"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.2.208",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "^28.1.4",
+    "@types/uuid": "^8.3.4",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.2",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
