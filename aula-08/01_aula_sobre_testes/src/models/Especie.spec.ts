@@ -73,7 +73,6 @@ describe('Class Specie', () => {
       scientificName: 'dog',
       populationInMillions: 40,
     })
-  
 
     expect(dog.commomName).not.toEqual(dog.scientificName)
     expect(dog.scientificName).toEqual('N/A')
