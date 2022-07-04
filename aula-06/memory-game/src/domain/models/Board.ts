@@ -53,6 +53,14 @@ export class Board implements BoardContract {
     this.#cardMatchAmount = cardMatchAmount
   }
 
+  get view() {
+    return this.#view
+  }
+
+  set view(boardContainer: HTMLDivElement) {
+    this.#view = boardContainer
+  }
+
   shuffleCards() {
     console.log('shuffleCards')
     const fruitCardAmount: Record<AvailableCardTypes, number> = 
@@ -133,13 +141,5 @@ export class Board implements BoardContract {
     boardContainer?.append(boardTemplateClone)    
     
     this.view = boardContainer as HTMLDivElement
-  }
-
-  get view() {
-    return this.#view
-  }
-
-  set view(boardContainer: HTMLDivElement) {
-    this.#view = boardContainer
   }
 }
