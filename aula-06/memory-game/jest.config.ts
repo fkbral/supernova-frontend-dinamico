@@ -6,12 +6,15 @@
 export default {
   clearMocks: true,
   collectCoverage: true,
+  collectCoverageFrom: ["**/*.spec.ts", "**/*.test.ts"],
   coveragePathIgnorePatterns: [],
   coverageDirectory: "coverage",
   coverageProvider: "v8",
-  testEnvironment: "jsdom",
+  testEnvironment: "<rootDir>/__tests__/environment/customEnvironment.js",
 
   modulePaths: ["<rootDir>/src"],
+  modulePathIgnorePatterns: ["<rootDir>/__tests__/environment/"],
+  
   transform: {
     "^.+\\.(ts|js|tsx|jsx)$": "@swc/jest"
   },

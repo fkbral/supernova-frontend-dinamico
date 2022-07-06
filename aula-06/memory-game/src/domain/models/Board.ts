@@ -6,6 +6,7 @@ interface BoardContract {
   chosenTypes: AvailableCardTypes[]
   playerNumber: number
   view: HTMLDivElement
+  DOM: HTMLElement
 }
 
 interface CreateBoard {
@@ -13,22 +14,25 @@ interface CreateBoard {
   cardMatchAmount: number
   chosenTypes: AvailableCardTypes[]
   playerNumber?: number
+  DOM?: HTMLElement
 }
 
 export class Board implements BoardContract {
   public boardSize: number
   public chosenTypes: AvailableCardTypes[]
   public playerNumber: number
+  public DOM: HTMLElement
   #cardMatchAmount: number
   #view: HTMLDivElement
   #memorizationTimeInSeconds: number
 
-  constructor({ boardSize, cardMatchAmount, chosenTypes, playerNumber }: CreateBoard) {
+  constructor({ boardSize, cardMatchAmount, chosenTypes, playerNumber, DOM }: CreateBoard) {
     this.boardSize = boardSize
     this.cardMatchAmount = cardMatchAmount
     this.chosenTypes = chosenTypes
     this.playerNumber = playerNumber ?? 1
     this.#memorizationTimeInSeconds = 3
+    this.DOM = DOM ?? document.body
     this.render()
     this.shuffleCards()
   }
@@ -116,11 +120,11 @@ export class Board implements BoardContract {
   }
 
   render() {
-    const boardContainer = document.querySelector(
+    const boardContainer = this.DOM.querySelector(
       `[data-memory-game-board="player${this.playerNumber}"]`
     )
 
-    const boardTemplateClone: HTMLDivElement = document.querySelector(
+    const boardTemplateClone: HTMLDivElement = this.DOM.querySelector(
       '#memory-game-board-template'
     )!.cloneNode(true).content
 
@@ -131,7 +135,7 @@ export class Board implements BoardContract {
     const boardUl = boardTemplateClone.querySelector<HTMLUListElement>('ul')!
 
     Array.from({length: this.boardSize}).forEach((_) => {
-      const boardCardTemplateClone = document.querySelector(
+      const boardCardTemplateClone = this.DOM.querySelector(
         '#memory-game-card-template'
       )!.cloneNode(true).content
 
