@@ -66,7 +66,6 @@ export class Board implements BoardContract {
   }
 
   shuffleCards() {
-    console.log('shuffleCards')
     const fruitCardAmount: Record<AvailableCardTypes, number> = 
       {} as Record<AvailableCardTypes, number>
     
@@ -109,10 +108,7 @@ export class Board implements BoardContract {
   }
 
   hideCards() {
-
-    console.log('hiding')
     setTimeout(() => {
-      console.log('hidden')
       const cardsLi = this.view.querySelectorAll<HTMLLIElement>('li')!
 
       cardsLi.forEach(card => card.dataset.hidden = "true")
